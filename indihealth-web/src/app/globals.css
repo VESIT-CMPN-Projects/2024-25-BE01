@@ -1,0 +1,47 @@
+/* src/app/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --teal: #008080;
+  --ivory: #FFFFF0;
+  --slate-gray: #708090;
+  --light-gray: #D3D3D3;
+  --soft-green: #90EE90;
+  --coral: #FF7F50;
+}
+
+/* Add this CSS to your global styles or create a separate CSS file for pagination */
+
+.pagination {
+  @apply flex justify-center items-center space-x-2 mt-4;
+}
+
+.page-item {
+  @apply border border-gray-300 rounded-md;
+}
+
+.page-link {
+  @apply px-4 py-2 text-sm text-gray-700 flex items-center justify-center p-3;
+}
+
+.page-link:hover {
+  @apply bg-gray-100;
+}
+
+.active {
+  @apply bg-teal-600 text-white;
+}
+
+.disabled {
+  @apply bg-gray-300 text-gray-500 cursor-not-allowed ;
+}
+
+.page-link,
+.active,
+.disabled {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+
